@@ -33,7 +33,7 @@ export class App extends Component{
         }
     };
 
-    async componentWillUpdate(prevProps, prevState) {
+    async componentDidUpdate(prevProps, prevState) {
         const { value, page } = this.state;
         if (prevState.value !== value || prevState.page !== page) {
             this.fetchImages();
